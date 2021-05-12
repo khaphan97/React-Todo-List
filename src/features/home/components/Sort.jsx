@@ -8,8 +8,8 @@ function Sort(props) {
 
 	const dispatch = useDispatch();
 
-	const handleOrderClick = (orderBy, orderDir) => {
-		console.log(orderBy, orderDir);
+	const handleOrderClick = (event, orderBy, orderDir) => {
+		event.preventDefault();
 		const action = orderAction({ orderBy, orderDir });
 		dispatch(action);
 	};
@@ -27,23 +27,39 @@ function Sort(props) {
 				</button>
 				<ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
 					<li>
-						<a href="/#" role="button" onClick={() => handleOrderClick("title", "asc")}>
+						<a
+							href="/#"
+							role="button"
+							onClick={(event) => handleOrderClick(event, "title", "asc")}
+						>
 							Title ASC
 						</a>
 					</li>
 					<li>
-						<a href="/#" role="button" onClick={() => handleOrderClick("title", "desc")}>
+						<a
+							href="/#"
+							role="button"
+							onClick={(event) => handleOrderClick(event, "title", "desc")}
+						>
 							Title DESC
 						</a>
 					</li>
 					<li role="separator" className="divider" />
 					<li>
-						<a href="/#" role="button" onClick={() => handleOrderClick("level", "asc")}>
+						<a
+							href="/#"
+							role="button"
+							onClick={(event) => handleOrderClick(event, "level", "asc")}
+						>
 							Level ASC
 						</a>
 					</li>
 					<li>
-						<a href="/#" role="button" onClick={() => handleOrderClick("level", "desc")}>
+						<a
+							href="/#"
+							role="button"
+							onClick={(event) => handleOrderClick(event, "level", "desc")}
+						>
 							Level DESC
 						</a>
 					</li>

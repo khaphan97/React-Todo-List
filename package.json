@@ -2,7 +2,7 @@
 	"name": "react-todo-prc",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "http://phanhuykha123.github.io/react-todo-app",
+	"homepage": "https://phanhuykha123.github.io/React-Todo-List/",
 	"dependencies": {
 		"@reduxjs/toolkit": "^1.5.1",
 		"@testing-library/jest-dom": "^4.2.4",
